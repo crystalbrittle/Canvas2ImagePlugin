@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-canvas2image",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Save a canvas image to the iOS Photo Library, or Android Gallery.",
   "cordova": {
     "id": "org.devgeeks.Canvas2ImagePlugin",
