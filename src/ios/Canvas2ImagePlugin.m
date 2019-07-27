@@ -41,14 +41,14 @@
         // Show error message...
         NSLog(@"ERROR: %@",error);
     CDVPluginResult* result = [CDVPluginResult resultWithStatus: CDVCommandStatus_ERROR messageAsString:error.description];
-    [self.webView stringByEvaluatingJavaScriptFromString:[result toErrorCallbackString: self.callbackId]];
+    [self.commandDelegate sendPluginResult:result callbackId:self.callbackId];
     }
     else  // No errors
     {
         // Show message image successfully saved
         NSLog(@"IMAGE SAVED!");
     CDVPluginResult* result = [CDVPluginResult resultWithStatus: CDVCommandStatus_OK messageAsString:@"Image saved"];
-    [self.webView stringByEvaluatingJavaScriptFromString:[result toSuccessCallbackString: self.callbackId]];
+    [self.commandDelegate sendPluginResult:result callbackId:self.callbackId];
     }
 }
 
